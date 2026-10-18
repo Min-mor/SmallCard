@@ -1,0 +1,129 @@
+
+.setting-page.data-v-8936fe0d {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.bottom-placeholder.data-v-8936fe0d {
+  flex: 1;
+}
+.logo-section.data-v-8936fe0d {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40rpx 0;
+}
+.page-logo.data-v-8936fe0d {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 24rpx;
+}
+.header.data-v-8936fe0d {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  background-color: transparent;
+  border-bottom: none;
+  position: fixed;
+  top: 0;
+  left: 30rpx;
+  right: 30rpx;
+  z-index: 10;
+}
+.back-btn.data-v-8936fe0d {
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 36rpx;
+  background: transparent;
+  color: #333;
+  padding: 0;
+}
+.page-title.data-v-8936fe0d {
+  flex: 1;
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+}
+.setting-list.data-v-8936fe0d {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 16rpx;
+  padding-top: 40rpx; /* 调整内边距，适配添加的logo区域 */
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.setting-item.data-v-8936fe0d {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx 40rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  transition: background-color 0.2s;
+}
+.setting-item.data-v-8936fe0d:last-child {
+  border-bottom: none;
+}
+
+/* 点击效果 */
+.setting-item-hover.data-v-8936fe0d {
+  background-color: #f5f5f5;
+}
+.item-left.data-v-8936fe0d {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.item-icon.data-v-8936fe0d {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 24rpx;
+  object-fit: contain;
+  vertical-align: middle;
+}
+.item-text.data-v-8936fe0d {
+  font-size: 32rpx;
+  color: #333333;
+  font-weight: 400;
+}
+.item-desc.data-v-8936fe0d {
+  font-size: 26rpx;
+  color: #999999;
+  margin-right: 12rpx;
+}
+.arrow-icon.data-v-8936fe0d {
+  width: 20rpx;
+  height: 36rpx;
+  opacity: 0.5;
+}
+.switch-container.data-v-8936fe0d {
+  display: flex;
+  align-items: center;
+}
+.logout-btn.data-v-8936fe0d {
+  margin: 60rpx auto;
+  width: 670rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  border-radius: 44rpx;
+  border: 1rpx solid #ff4d4f;
+  background-color: #ffffff;
+  transition: background-color 0.2s;
+}
+.logout-btn.data-v-8936fe0d:active {
+  background-color: #fff1f0;
+}
+.logout-btn text.data-v-8936fe0d {
+  font-size: 32rpx;
+  color: #ff4d4f;
+  font-weight: 500;
+}
+button.data-v-8936fe0d::after {
+  border: none;
+}

@@ -1,0 +1,119 @@
+
+.feedback-page.data-v-58d78baa {
+ 
+  min-height: 100vh;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+/* 头部导航 */
+.header.data-v-58d78baa {
+  display: flex;
+  align-items: center;
+  padding: 30rpx 0;
+}
+.back-btn.data-v-58d78baa {
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 36rpx;
+  background: transparent;
+  color: #fff;
+  padding: 0;
+}
+.page-title.data-v-58d78baa {
+  flex: 1;
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Logo样式 */
+.logo-section.data-v-58d78baa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40rpx 0;
+}
+.page-logo.data-v-58d78baa {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 24rpx;
+}
+
+/* 主内容区 */
+.content.data-v-58d78baa {
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 反馈输入框容器 */
+.feedback-input-box.data-v-58d78baa {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  box-sizing: border-box;
+  margin-bottom: 60rpx;
+}
+
+/* 文本输入区域 */
+.feedback-textarea.data-v-58d78baa {
+  width: 100%;
+  min-height: 300rpx;
+  font-size: 30rpx;
+  color: #333;
+  padding: 10rpx;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+/* 文件选择区域 */
+.file-ops.data-v-58d78baa {
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+  padding-top: 20rpx;
+  border-top: 1rpx dashed #ddd;
+}
+.file-btn.data-v-58d78baa {
+  width: 180rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #2699fb;
+  border: 1rpx solid #2699fb;
+  border-radius: 8rpx;
+  background-color: transparent;
+  margin-right: 20rpx;
+}
+.file-name.data-v-58d78baa {
+  font-size: 26rpx;
+  color: #666;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 发送按钮 */
+.submit-btn.data-v-58d78baa {
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #2699fb;
+  color: #fff;
+  font-size: 32rpx;
+  border-radius: 45rpx;
+  border: none;
+}
+button.data-v-58d78baa::after {
+  border: none;
+}

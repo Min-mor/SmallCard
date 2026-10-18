@@ -1,0 +1,61 @@
+
+.social-setting.data-v-f1ad5840 {
+  padding: 40rpx;
+}
+.section-title.data-v-f1ad5840 {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+}
+.social-item.data-v-f1ad5840 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+.social-icon.data-v-f1ad5840 {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+.social-input.data-v-f1ad5840 {
+  flex: 1;
+  height: 80rpx;
+  border: 1rpx solid #eee;
+  border-radius: 10rpx;
+  padding: 0 20rpx;
+  margin-right: 20rpx;
+  box-sizing: border-box;
+}
+.close-text.data-v-f1ad5840 {
+  font-size: 32rpx;
+  color: #999;
+  /* 增加点击区域和反馈 */
+  width: 40rpx;
+  height: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.close-text.data-v-f1ad5840:active {
+  background-color: #f5f5f5;
+}
+.btn-group.data-v-f1ad5840 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60rpx;
+}
+.next-btn.data-v-f1ad5840, .skip-btn.data-v-f1ad5840 {
+  width: 48%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+}
+.next-btn.data-v-f1ad5840 {
+  background-color: #2699fb;
+  color: #fff;
+}
+.skip-btn.data-v-f1ad5840 {
+  border: 1rpx solid #eee;
+  background-color: #fff;
+}

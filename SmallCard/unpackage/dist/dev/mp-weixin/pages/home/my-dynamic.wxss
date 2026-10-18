@@ -1,0 +1,537 @@
+
+.my-dynamic-page.data-v-bc87964f {
+  padding-bottom: 40rpx;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+/* 导航栏样式 */
+.nav-bar.data-v-bc87964f {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+  padding: 0 30rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #eee;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.back-btn.data-v-bc87964f {
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+  color: #333;
+}
+.nav-title.data-v-bc87964f {
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #333;
+}
+.empty.data-v-bc87964f {
+  width: 60rpx;
+}
+
+/* 动态列表样式 */
+.dynamic-list.data-v-bc87964f {
+  padding: 20rpx;
+}
+.post-item.data-v-bc87964f {
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+/* 头部信息 */
+.post-header.data-v-bc87964f {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.avatar.data-v-bc87964f {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.user-info.data-v-bc87964f {
+  flex: 1;
+}
+.user-name.data-v-bc87964f {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 5rpx;
+}
+.post-time.data-v-bc87964f {
+  font-size: 24rpx;
+  color: #999;
+}
+
+/* 内容样式 */
+.post-content.data-v-bc87964f {
+  font-size: 30rpx;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20rpx;
+  word-break: break-word;
+}
+
+/* 确保即使内容为空也有基本的最小高度 */
+.detail-post-content.data-v-bc87964f {
+  min-height: 200rpx;
+}
+
+/* 图片列表 */
+.image-list.data-v-bc87964f {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10rpx;
+  margin-bottom: 20rpx;
+}
+.post-image.data-v-bc87964f {
+  width: calc((100% - 20rpx) / 3);
+  height: calc((100% - 20rpx) / 3);
+  border-radius: 10rpx;
+  background-color: #f0f0f0;
+}
+
+/* 操作栏 */
+.post-actions.data-v-bc87964f {
+  display: flex;
+  border-top: 1rpx solid #f0f0f0;
+  padding-top: 20rpx;
+}
+.action-item.data-v-bc87964f {
+  display: flex;
+  align-items: center;
+  margin-right: 60rpx;
+  transition: transform 0.3s ease;
+}
+.action-icon.data-v-bc87964f {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 10rpx;
+  transition: transform 0.3s ease;
+}
+.action-item text.data-v-bc87964f {
+  font-size: 26rpx;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+/* 已点赞状态样式 */
+.action-item.liked text.data-v-bc87964f {
+  color: #ff3b30;
+}
+
+/* 点击交互效果 */
+.action-item:active .action-icon.data-v-bc87964f {
+  transform: scale(1.2);
+}
+  
+/* 点赞动画效果 */
+@keyframes likeAnimation-bc87964f {
+0% {
+    transform: scale(1);
+}
+50% {
+    transform: scale(1.3);
+}
+100% {
+    transform: scale(1);
+}
+}
+@keyframes unlikeAnimation-bc87964f {
+0% {
+    transform: scale(1);
+}
+50% {
+    transform: scale(0.8);
+}
+100% {
+    transform: scale(1);
+}
+}
+.like-animation.data-v-bc87964f {
+  animation: likeAnimation-bc87964f 0.6s ease;
+}
+.unlike-animation.data-v-bc87964f {
+  animation: unlikeAnimation-bc87964f 0.6s ease;
+}
+
+/* 评论区域样式 */
+.comments-section.data-v-bc87964f {
+  background-color: #fff;
+  padding: 30rpx;
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+}
+.comment-list-header.data-v-bc87964f {
+  margin-bottom: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+.comment-list-title.data-v-bc87964f {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+}
+.comment-list.data-v-bc87964f {
+  max-height: 600rpx;
+  overflow-y: auto;
+}
+.comment-item.data-v-bc87964f {
+  display: flex;
+  margin-bottom: 30rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+.comment-avatar.data-v-bc87964f {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+  flex-shrink: 0;
+}
+.comment-main.data-v-bc87964f {
+  flex: 1;
+}
+.comment-user.data-v-bc87964f {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #333;
+  margin-right: 10rpx;
+}
+.reply-to.data-v-bc87964f {
+  font-size: 28rpx;
+  color: #999;
+}
+.comment-content.data-v-bc87964f {
+  display: block;
+  font-size: 30rpx;
+  color: #333;
+  line-height: 1.5;
+  margin-top: 8rpx;
+  margin-bottom: 10rpx;
+  word-break: break-word;
+}
+.comment-meta.data-v-bc87964f {
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: #999;
+}
+.comment-time.data-v-bc87964f {
+  margin-right: 30rpx;
+}
+.like-icon.data-v-bc87964f {
+  margin-right: 30rpx;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.like-icon.liked.data-v-bc87964f {
+  color: #ff4757;
+}
+.reply-icon.data-v-bc87964f {
+  cursor: pointer;
+}
+.child-comments.data-v-bc87964f {
+  margin-top: 20rpx;
+  padding-left: 40rpx;
+  background-color: #f9f9f9;
+  padding: 20rpx;
+  border-radius: 10rpx;
+}
+.child-comment-item.data-v-bc87964f {
+  margin-bottom: 15rpx;
+}
+.child-comment-item.data-v-bc87964f:last-child {
+  margin-bottom: 0;
+}
+.expand-replies.data-v-bc87964f {
+  margin-top: 15rpx;
+  color: #666;
+  font-size: 26rpx;
+  cursor: pointer;
+}
+.no-comments.data-v-bc87964f {
+  text-align: center;
+  padding: 60rpx 0;
+  color: #999;
+  font-size: 28rpx;
+}
+
+/* 底部评论输入框 */
+.bottom-comment-input.data-v-bc87964f {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 20rpx 30rpx;
+  border-top: 1rpx solid #eee;
+  z-index: 1000;
+}
+.comment-input.data-v-bc87964f {
+  flex: 1;
+  height: 80rpx;
+  background-color: #f5f5f5;
+  border-radius: 40rpx;
+  padding: 0 30rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+.comment-submit.data-v-bc87964f {
+  margin-left: 20rpx;
+  height: 70rpx;
+  min-width: 120rpx;
+  line-height: 70rpx;
+  background-color: #07c160;
+  color: #fff;
+  font-size: 28rpx;
+  border-radius: 35rpx;
+  padding: 0;
+  border: none;
+}
+
+/* 空状态 */
+.empty-state.data-v-bc87964f {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100rpx 0;
+}
+.empty-icon.data-v-bc87964f {
+  width: 160rpx;
+  height: 160rpx;
+  margin-bottom: 30rpx;
+  opacity: 0.5;
+}
+.empty-text.data-v-bc87964f {
+  font-size: 30rpx;
+  color: #999;
+  margin-bottom: 40rpx;
+}
+.publish-btn.data-v-bc87964f {
+  background-color: #2699fb;
+  color: #fff;
+  border: none;
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+}
+/* 帖子详情样式 */
+.post-detail-page.data-v-bc87964f {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+.fixed-header.data-v-bc87964f {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #eee;
+  z-index: 100;
+}
+.back-button.data-v-bc87964f {
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.back-icon.data-v-bc87964f {
+  width: 40rpx;
+  height: 40rpx;
+}
+.detail-title.data-v-bc87964f {
+  flex: 1;
+  text-align: center;
+  margin: 0 30rpx;
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #333;
+}
+.delete-button.data-v-bc87964f {
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.delete-icon.data-v-bc87964f {
+  width: 40rpx;
+  height: 40rpx;
+}
+.scrollable-content.data-v-bc87964f {
+  flex: 1;
+  overflow-y: auto;
+  padding-top: 100rpx;
+  padding-bottom: 20rpx;
+}
+.detail-user-info.data-v-bc87964f {
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  border-bottom: 10rpx solid #f5f5f5;
+}
+.detail-avatar.data-v-bc87964f {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.detail-user-name.data-v-bc87964f {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #333;
+}
+.detail-post-content.data-v-bc87964f {
+  padding: 30rpx;
+}
+.detail-content-text.data-v-bc87964f {
+  font-size: 32rpx;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 30rpx;
+  word-break: break-word;
+}
+.detail-image-list.data-v-bc87964f {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10rpx;
+  margin-bottom: 30rpx;
+}
+.detail-post-image.data-v-bc87964f {
+  width: calc((100% - 20rpx) / 3);
+  height: calc((100% - 20rpx) / 3);
+  border-radius: 10rpx;
+  background-color: #f0f0f0;
+}
+.detail-time.data-v-bc87964f {
+  font-size: 24rpx;
+  color: #999;
+  margin-bottom: 30rpx;
+}
+.detail-interact.data-v-bc87964f {
+  display: flex;
+  border-top: 1rpx solid #f0f0f0;
+  padding-top: 20rpx;
+  margin-top: auto; /* 确保交互栏始终在内容底部 */
+}
+.detail-icon-item.data-v-bc87964f {
+  display: flex;
+  align-items: center;
+  margin-right: 60rpx;
+}
+.detail-interact-icon.data-v-bc87964f {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+  transition: transform 0.3s ease;
+}
+.detail-icon-item text.data-v-bc87964f {
+  font-size: 28rpx;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+/* 详情页已点赞状态样式 */
+.detail-icon-item.liked text.data-v-bc87964f,
+.detail-interact-icon.liked.data-v-bc87964f {
+  color: #ff3b30;
+}
+
+/* 详情页点赞动画效果 */
+.detail-icon-item:active .detail-interact-icon.data-v-bc87964f {
+  transform: scale(1.2);
+}
+
+/* 移除旧的active样式，使用liked样式代替 */
+
+/* 删除确认弹窗样式 */
+.delete-confirm.data-v-bc87964f {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.delete-overlay.data-v-bc87964f {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.delete-content.data-v-bc87964f {
+  position: relative;
+  width: 600rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 40rpx;
+  z-index: 10;
+}
+.delete-title.data-v-bc87964f {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+.delete-message.data-v-bc87964f {
+  font-size: 30rpx;
+  color: #666;
+  text-align: center;
+  margin-bottom: 40rpx;
+  line-height: 1.6;
+}
+.delete-buttons.data-v-bc87964f {
+  display: flex;
+  border-top: 1rpx solid #eee;
+}
+.cancel-btn.data-v-bc87964f,
+.confirm-btn.data-v-bc87964f {
+  flex: 1;
+  padding: 30rpx 0;
+  text-align: center;
+  font-size: 32rpx;
+}
+.cancel-btn.data-v-bc87964f {
+  color: #666;
+  border-right: 1rpx solid #eee;
+}
+.confirm-btn.data-v-bc87964f {
+  color: #ff3b30;
+  font-weight: 500;
+}

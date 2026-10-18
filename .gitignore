@@ -1,0 +1,8 @@
+# 系统文件与日志
+.DS_Store
+Thumbs.db
+*.log
+
+# IDE
+.idea/
+.vscode/

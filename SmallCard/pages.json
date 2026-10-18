@@ -1,0 +1,302 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/cover",
+      "meta": {
+        "requiresAuth": false,
+        "description": "封面页，游客可访问"
+      },
+      "style": {
+        "navigationStyle": "custom",
+        "app-plus": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "pages/index/index",
+      "meta": {
+        "requiresAuth": false,
+        "description": "首页，游客可访问"
+      },
+      "style": {
+        "navigationBarTitleText": "首页",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/index/post-detail",
+      "meta": {
+        "requiresAuth": false,
+        "description": "帖子详情页，游客可访问"
+      },
+      "style": {
+        "navigationBarTitleText": "帖子详情",
+        "navigationBarTextStyle": "black"
+      }
+    },
+
+    {
+      "path": "pages/home/index",
+      "meta": {
+        "requiresAuth": true,
+        "description": "个人主页，需要登录才能访问"
+      },
+      "style": {
+        "navigationBarTitleText": "我的主页",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/social/index",
+      "meta": {
+        "requiresAuth": false,
+        "description": "社交页面，游客可访问，但只能点赞不能评论"
+      },
+      "style": {
+        "navigationBarTitleText": "社交",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/card-folder/card-folder",
+      "meta": {
+        "requiresAuth": true,
+        "description": "名片夹，需要登录才能访问"
+      },
+      "style": {
+        "navigationBarTitleText": "名片夹"
+      }
+    },
+    {
+      "path": "pages/setting/basic",
+      "meta": {
+        "requiresAuth": true,
+        "description": "设置基础资料，需要登录才能访问"
+      },
+      "style": {
+        "navigationBarTitleText": "设置基础资料",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/setting/social",
+      "meta": {
+        "requiresAuth": true,
+        "description": "设置社交媒体，需要登录才能访问"
+      },
+      "style": {
+        "navigationBarTitleText": "设置社交媒体",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/set/set",
+      "meta": {
+        "requiresAuth": true,
+        "description": "设置页面，需要登录才能访问"
+      },
+      "style": {
+        "navigationBarTitleText": "设置"
+      }
+    },
+    {
+      "path": "pages/set/feedback",
+      "meta": {
+        "requiresAuth": true,
+        "description": "反馈页面，需要登录才能访问"
+      },
+      "style": {
+        "navigationBarTitleText": "反馈"
+      }
+    },
+    {
+      "path": "pages/set/about",
+      "meta": {
+        "requiresAuth": true,
+        "description": "关于我们，需要登录才能访问"
+      },
+      "style": {
+        "navigationBarTitleText": "关于我们"
+      }
+    },
+    {
+      "path": "pages/set/switch-account",
+      "meta": {
+        "requiresAuth": true,
+        "description": "切换账号，需要登录才能访问"
+      },
+      "style": {
+        "navigationBarTitleText": "切换账号"
+      }
+    },
+    {
+      "path": "pages/tag-edit/tag-edit",
+      "meta": {
+        "requiresAuth": true,
+        "description": "添加修改tag，需要登录才能访问"
+      },
+      "style": {
+        "navigationBarTitleText": "添加修改tag"
+      }
+    },
+    {
+      "path": "pages/contact/contact",
+      "meta": {
+        "requiresAuth": true,
+        "description": "联系我，需要登录才能访问"
+      },
+      "style": {
+        "navigationBarTitleText": "联系我"
+      }
+    },
+    {
+    	"path" : "pages/social/publish",
+    	"meta": {
+    		"requiresAuth": true,
+    		"description": "发布动态，需要登录才能访问"
+    	},
+    	"style" : 
+    	{
+    		"navigationBarTitleText" : ""
+    	}
+    },
+    {
+    	"path" : "pages/social/message",
+    	"meta": {
+    		"requiresAuth": true,
+    		"description": "社交消息页面，需要登录才能访问"
+    	},
+    	"style" : 
+    	{
+    		"navigationBarTitleText" : "社交消息",
+    		"navigationStyle": "custom",
+    		"app-plus": {
+    		  "titleNView": false
+    		}
+    	}
+    },
+    {
+    	"path" : "pages/home-message/index",
+    	"meta": {
+    		"requiresAuth": true,
+    		"description": "首页消息中心，需要登录才能访问"
+    	},
+    	"style" : 
+    	{
+    		"navigationBarTitleText" : "首页消息中心",
+    		"navigationStyle": "custom",
+    		"app-plus": {
+    		  "titleNView": false
+    		}
+    	}
+    },
+    {
+      "path": "pages/home/my-dynamic",
+      "meta": {
+        "requiresAuth": true,
+        "description": "我的动态，需要登录才能访问"
+      },
+      "style": {
+        "navigationBarTitleText": "我的动态",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/monthly-report/index",
+      "meta": {
+        "requiresAuth": true,
+        "description": "个人月度报告，需要登录才能访问"
+      },
+      "style": {
+        "navigationBarTitleText": "个人月度报告",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/friend-detail/friend-detail",
+      "meta": {
+        "requiresAuth": true,
+        "description": "好友详情页面，需要登录才能访问"
+      },
+      "style": {
+        "navigationBarTitleText": "",
+        "navigationStyle": "custom",
+        "app-plus": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "pages/home/praise",
+      "meta": {
+        "requiresAuth": true,
+        "description": "夸夸页面，需要登录才能访问"
+      },
+      "style": {
+        "navigationBarTitleText": "",
+        "navigationStyle": "custom",
+        "app-plus": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "pages/card-detail/card-detail",
+      "meta": {
+        "requiresAuth": true,
+        "description": "名片详情页面，需要登录才能访问"
+      },
+      "style": {
+        "navigationBarTitleText": "",
+        "navigationStyle": "custom",
+        "app-plus": {
+          "titleNView": false
+        }
+      }
+    },
+    {
+      "path": "pages/praise-detail/praise-detail",
+      "meta": {
+        "requiresAuth": true,
+        "description": "夸夸TA页面，需要登录才能访问"
+      },
+      "style": {
+        "navigationBarTitleText": "夸夸TA",
+        "navigationStyle": "custom"
+      }
+    }
+  ],
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#000",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "我的",
+        "iconPath": "static/icon/我的.png",
+        "selectedIconPath": "static/icon/我的-深色.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/icon/首页.png",
+        "selectedIconPath": "static/icon/首页-深色.png"
+      },
+      {
+        "pagePath": "pages/social/index",
+        "text": "社交",
+        "iconPath": "static/icon/社交.png",
+        "selectedIconPath": "static/icon/社交-深色.png"
+      }
+    ]
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "应用名称",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F5F5F5"
+  }
+}

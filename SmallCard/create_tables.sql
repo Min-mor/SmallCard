@@ -1,0 +1,115 @@
+-- 创建数据库
+CREATE DATABASE IF NOT EXISTS mini_program_digital_card 
+CHARACTER SET utf8mb4 
+COLLATE utf8mb4_unicode_ci;
+
+-- 使用数据库
+USE mini_program_digital_card;
+
+-- 1. 用户信息表（主表，先创建） 
+CREATE TABLE mp_user ( 
+  用户ID INT NOT NULL AUTO_INCREMENT COMMENT '主键，用户唯一标识', 
+  微信小程序标识 VARCHAR(100) NOT NULL COMMENT '微信小程序openid', 
+  微信昵称 VARCHAR(50) DEFAULT '' COMMENT '微信昵称', 
+  微信头像URL VARCHAR(255) DEFAULT '' COMMENT '微信头像URL', 
+  手机号 VARCHAR(20) DEFAULT '' COMMENT '手机号', 
+  真实姓名 VARCHAR(50) DEFAULT '' COMMENT '真实姓名', 
+  身份证号 VARCHAR(20) DEFAULT '' COMMENT '身份证号', 
+  身份认证状态 TINYINT NOT NULL DEFAULT 0 COMMENT '身份认证状态：0-未认证，1-已认证，2-认证失败', 
+  角色 TINYINT NOT NULL DEFAULT 0 COMMENT '角色：0-普通用户，1-管理员', 
+  状态 TINYINT NOT NULL DEFAULT 1 COMMENT '状态：0-禁用，1-正常', 
+  注册时间 DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '注册时间', 
+  最后登录时间 DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '最后登录时间', 
+  PRIMARY KEY (用户ID), 
+  UNIQUE KEY UK_微信小程序标识 (微信小程序标识) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- 2. 小程序会话表 
+CREATE TABLE mp_session ( 
+  会话ID VARCHAR(64) NOT NULL COMMENT '会话ID（小程序端存储的token）', 
+  用户ID INT NOT NULL COMMENT '关联用户ID', 
+  微信标识 VARCHAR(100) NOT NULL COMMENT '微信openid', 
+  会话过期时间 DATETIME NOT NULL COMMENT '会话过期时间', 
+  创建时间 DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间', 
+  更新时间 DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间', 
+  PRIMARY KEY (会话ID), 
+  UNIQUE KEY UK_会话用户ID (用户ID), 
+  INDEX IDX_会话微信标识 (微信标识), 
+  CONSTRAINT FK_会话_用户 FOREIGN KEY (用户ID) 
+    REFERENCES mp_user (用户ID) 
+    ON DELETE CASCADE 
+    ON UPDATE CASCADE 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- 3. 用户关系表（依赖 mp_user） 
+CREATE TABLE mp_user_relation ( 
+  关系ID INT NOT NULL AUTO_INCREMENT COMMENT '关系ID', 
+  用户ID INT NOT NULL COMMENT '用户ID', 
+  关联用户ID INT NOT NULL COMMENT '关联用户ID', 
+  关系类型 TINYINT NOT NULL COMMENT '关系类型：1-好友，2-关注', 
+  建立时间 DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '建立时间', 
+  PRIMARY KEY (关系ID), 
+  UNIQUE KEY UK_用户关联用户 (用户ID, 关联用户ID), 
+  CONSTRAINT FK_关系_用户 FOREIGN KEY (用户ID) 
+    REFERENCES mp_user (用户ID) 
+    ON DELETE CASCADE 
+    ON UPDATE CASCADE, 
+  CONSTRAINT FK_关系_关联用户 FOREIGN KEY (关联用户ID) 
+    REFERENCES mp_user (用户ID) 
+    ON DELETE CASCADE 
+    ON UPDATE CASCADE 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- 4. 数字名片表（依赖 mp_user） 
+CREATE TABLE mp_digital_card ( 
+  名片ID INT NOT NULL AUTO_INCREMENT COMMENT '名片ID', 
+  用户ID INT NOT NULL COMMENT '创建者ID', 
+  名片名称 VARCHAR(100) NOT NULL COMMENT '名片名称', 
+  基础信息 JSON NOT NULL COMMENT '基础信息（JSON格式）', 
+  名片状态 TINYINT DEFAULT 1 COMMENT '状态：0-草稿，1-已发布，2-已下架', 
+  被查看次数 INT DEFAULT 0 COMMENT '被查看次数', 
+  创建时间 DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间', 
+  更新时间 DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间', 
+  PRIMARY KEY (名片ID), 
+  INDEX IDX_名片用户ID (用户ID), 
+  INDEX IDX_名片状态 (名片状态), 
+  CONSTRAINT FK_名片_用户 FOREIGN KEY (用户ID) 
+    REFERENCES mp_user (用户ID) 
+    ON DELETE CASCADE 
+    ON UPDATE CASCADE 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- 5. 个人报告表（依赖 mp_user） 
+CREATE TABLE mp_personal_report ( 
+  报告ID INT NOT NULL AUTO_INCREMENT COMMENT '报告ID', 
+  用户ID INT NOT NULL COMMENT '用户ID', 
+  报告内容 JSON NOT NULL COMMENT '报告内容（JSON格式）', 
+  生成时间 DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '生成时间', 
+  PRIMARY KEY (报告ID), 
+  INDEX IDX_报告用户ID (用户ID), 
+  CONSTRAINT FK_报告_用户 FOREIGN KEY (用户ID) 
+    REFERENCES mp_user (用户ID) 
+    ON DELETE CASCADE 
+    ON UPDATE CASCADE 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- 6. 行为日志表（依赖 mp_user 和 mp_digital_card） 
+CREATE TABLE mp_behavior_log ( 
+  日志ID INT NOT NULL AUTO_INCREMENT COMMENT '日志ID', 
+  用户ID INT NULL COMMENT '用户ID（用户操作时关联）', 
+  访客标识 VARCHAR(100) DEFAULT '' COMMENT '访客标识（非用户访问时生成）', 
+  行为类型 TINYINT NOT NULL COMMENT '行为类型：1-访问，2-收藏，3-分享', 
+  关联名片ID INT NULL COMMENT '关联名片ID', 
+  行为时间 DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '行为时间', 
+  PRIMARY KEY (日志ID), 
+  INDEX IDX_日志用户ID (用户ID), 
+  INDEX IDX_日志名片ID (关联名片ID), 
+  CONSTRAINT FK_日志_用户 FOREIGN KEY (用户ID) 
+    REFERENCES mp_user (用户ID) 
+    ON DELETE SET NULL 
+    ON UPDATE CASCADE, 
+  CONSTRAINT FK_日志_名片 FOREIGN KEY (关联名片ID) 
+    REFERENCES mp_digital_card (名片ID) 
+    ON DELETE SET NULL 
+    ON UPDATE CASCADE 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

@@ -1,0 +1,112 @@
+
+.praise-container.data-v-82c360a2 {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+.header.data-v-82c360a2 {
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+.back-button.data-v-82c360a2 {
+  width: 88rpx;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.back-icon.data-v-82c360a2 {
+  width: 40rpx;
+  height: 40rpx;
+}
+.header-title.data-v-82c360a2 {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #333333;
+}
+.header-right.data-v-82c360a2 {
+  width: 88rpx;
+}
+.content.data-v-82c360a2 {
+  flex: 1;
+  padding: 60rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icon-section.data-v-82c360a2 {
+  width: 160rpx;
+  height: 160rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60rpx;
+}
+.praise-icon.data-v-82c360a2 {
+  width: 100rpx;
+  height: 100rpx;
+  opacity: 0.7;
+}
+.input-section.data-v-82c360a2 {
+  width: 100%;
+  margin-bottom: 40rpx;
+}
+.input-textarea.data-v-82c360a2 {
+  width: 100%;
+  height: 240rpx;
+  border: 2rpx solid #e0e0e0;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  font-size: 32rpx;
+  color: #333333;
+  box-sizing: border-box;
+  background-color: #fafafa;
+}
+.image-upload-section.data-v-82c360a2 {
+  width: 100%;
+  margin-bottom: 40rpx;
+}
+.upload-button.data-v-82c360a2 {
+  width: 160rpx;
+  height: 160rpx;
+  border: 2rpx dashed #e0e0e0;
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.upload-icon.data-v-82c360a2 {
+  width: 60rpx;
+  height: 60rpx;
+  opacity: 0.6;
+}
+.preview-image.data-v-82c360a2 {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 15rpx;
+}
+.footer.data-v-82c360a2 {
+  padding: 40rpx;
+  background-color: #ffffff;
+  border-top: 1rpx solid #f0f0f0;
+}
+.send-button.data-v-82c360a2 {
+  width: 100%;
+  height: 96rpx;
+  background-color: #1989fa;
+  color: #ffffff;
+  font-size: 36rpx;
+  font-weight: 600;
+  border-radius: 48rpx;
+  border: none;
+}
+.send-button[disabled].data-v-82c360a2 {
+  background-color: #c0c4cc;
+  color: #ffffff;
+}

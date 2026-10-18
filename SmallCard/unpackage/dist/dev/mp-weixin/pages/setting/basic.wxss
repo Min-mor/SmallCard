@@ -1,0 +1,173 @@
+
+.basic-setting.data-v-08c11a46 {
+  padding: 40rpx;
+  background-color: #fff;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.header.data-v-08c11a46 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60rpx;
+  padding-top: 20rpx;
+}
+
+/* 头像区域样式（修改后） */
+.avatar-section.data-v-08c11a46 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60rpx;
+}
+.avatar-container.data-v-08c11a46 {
+  position: relative;
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%; /* 圆形边框 */
+  overflow: hidden;
+  border: 2rpx solid #eee;
+  cursor: pointer;
+}
+
+/* 已选择的头像图片 */
+.avatar-img.data-v-08c11a46 {
+  width: 100%;
+  height: 100%;
+}
+
+/* 未选择头像时的占位圆框 */
+.avatar-placeholder.data-v-08c11a46 {
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20rpx;
+}
+
+/* 上传提示文字 */
+.upload-text.data-v-08c11a46 {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 10rpx;
+}
+
+/* 上传辅助提示文字 */
+.upload-subtext.data-v-08c11a46 {
+  font-size: 22rpx;
+  color: #999;
+}
+
+/* 已选择头像时的编辑提示层 */
+.edit-overlay.data-v-08c11a46 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50rpx;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.edit-text.data-v-08c11a46 {
+  font-size: 24rpx;
+  color: #fff;
+}
+
+/* 用户输入区域样式 */
+.input-section.data-v-08c11a46 {
+  margin-bottom: 40rpx;
+}
+.input-item.data-v-08c11a46 {
+  width: 100%;
+  height: 80rpx;
+  border: 1rpx solid #eee;
+  border-radius: 10rpx;
+  padding: 0 20rpx;
+  margin-bottom: 30rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+}
+.textarea-item.data-v-08c11a46 {
+  width: 100%;
+  min-height: 120rpx;
+  border: 1rpx solid #eee;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  line-height: 1.5;
+  margin-bottom: 30rpx;
+}
+
+/* 吉梨模块样式 */
+.card-section.data-v-08c11a46 {
+  margin-bottom: 80rpx;
+  width: 320rpx;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card-item.data-v-08c11a46 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25rpx;
+  border: 1rpx solid #eee;
+  border-radius: 12rpx;
+  width: 100%;
+  height: 320rpx;
+  background-color: #fafafa;
+}
+.card-avatar.data-v-08c11a46 {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 8rpx;
+  margin-bottom: 20rpx;
+}
+.card-info.data-v-08c11a46 {
+  text-align: center;
+  margin-bottom: 25rpx;
+}
+.card-name.data-v-08c11a46 {
+  display: block;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+  color: #333;
+}
+.card-desc.data-v-08c11a46 {
+  display: block;
+  font-size: 22rpx;
+  color: #666;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+.copy-btn.data-v-08c11a46 {
+  width: 120rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 24rpx;
+  border-radius: 8rpx;
+  background-color: #f0f0f0;
+  color: #666;
+}
+
+/* 底部按钮样式 */
+.next-btn.data-v-08c11a46 {
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #2699fb;
+  color: #fff;
+  border-radius: 44rpx;
+  font-size: 32rpx;
+}
+button.data-v-08c11a46::after {
+  border: none;
+}

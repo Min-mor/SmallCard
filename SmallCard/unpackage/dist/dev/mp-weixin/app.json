@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/index/cover",
+    "pages/index/index",
+    "pages/index/post-detail",
+    "pages/home/index",
+    "pages/social/index",
+    "pages/card-folder/card-folder",
+    "pages/setting/basic",
+    "pages/setting/social",
+    "pages/set/set",
+    "pages/set/feedback",
+    "pages/set/about",
+    "pages/set/switch-account",
+    "pages/tag-edit/tag-edit",
+    "pages/contact/contact",
+    "pages/social/publish",
+    "pages/social/message",
+    "pages/home/my-dynamic",
+    "pages/monthly-report/index",
+    "pages/friend-detail/friend-detail",
+    "pages/home/praise",
+    "pages/card-detail/card-detail",
+    "pages/praise-detail/praise-detail"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "应用名称",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F5F5F5"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#000",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "我的",
+        "iconPath": "static/icon/我的.png",
+        "selectedIconPath": "static/icon/我的-深色.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/icon/首页.png",
+        "selectedIconPath": "static/icon/首页-深色.png"
+      },
+      {
+        "pagePath": "pages/social/index",
+        "text": "社交",
+        "iconPath": "static/icon/社交.png",
+        "selectedIconPath": "static/icon/社交-深色.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}
